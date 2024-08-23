@@ -1,0 +1,1 @@
+export {default as SectionDelivery} from './SectionDelivery.vue'

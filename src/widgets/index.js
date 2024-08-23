@@ -1,0 +1,6 @@
+export * from './section-instagram'
+export * from './section-about'
+export * from './section-delivery'
+export * from './section-products'
+export * from './section-banner'
+export * from './section-promo'

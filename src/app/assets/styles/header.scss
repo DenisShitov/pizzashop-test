@@ -1,0 +1,152 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+        
+    @include tablet {
+        padding: 32px 0;
+    }
+    @include desktop {
+        padding: 46px 0;
+    }
+
+    nav {
+        display: none;
+
+        @include desktop {
+            display: flex;
+            align-items: center;
+            column-gap: 60px;
+        }
+    }
+
+    &__logo {
+        svg {
+            width: 85px;
+
+            @include tablet {
+                width: 130px;
+            }
+            @include desktop {
+                width: 182px;
+            }
+
+            path {
+                fill: black;
+            }
+        }
+    }
+
+    &__actions {
+        display: flex;
+        align-items: center;
+        column-gap: 20px;
+
+        @include tablet {
+            column-gap: 70px;
+        }
+        @include desktop {
+            column-gap: 44px;
+        }
+    }
+
+    &__block {
+        display: flex;
+        align-items: center;
+        column-gap: 16px;
+
+        @include tablet {
+            column-gap: 32px;
+        }
+        @include desktop {
+            column-gap: 60px;
+        }
+    }
+
+    &__cart {
+        h4 {
+            font-size: 18px;
+            font-weight: 900;
+            line-height: 24.5px;
+        }
+    }
+
+    &__cart, &__contacts {
+        display: flex;
+        align-items: center;
+        column-gap: 12px;
+
+        .icon {
+            width: 40px;
+            height: 40px;
+            svg {
+                width: 32px;
+                @include tablet {
+                    width: 40px;
+                }
+                @include desktop {
+                    width: 40px;
+                }
+            }
+        }
+
+        .info {
+            display: none;
+
+            @include desktop {
+                display: block;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            h4 {
+                text-transform: uppercase;
+            }
+            p {
+                color: $color-gray-text;
+            }
+        }
+    }
+
+    &__cartinfo {
+        display: none;
+    }
+
+    &__lang {
+        display: none;
+        width: 48px;
+        height: 48px;
+        border-radius: 9999px;
+        background-color: $color-gray-bg;
+
+        @include tablet {
+            display: block;
+        }
+        @include desktop {
+            display: block;
+        }
+
+        h4 {
+            font-size: 18px;
+        }
+    }
+
+    &__burger {
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        svg {
+            width: 24px;
+            path {
+                fill: black;
+            }
+        }
+        @include desktop {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,294 @@
+.banner {
+    margin-bottom: 60px;
+    @include tablet {
+        margin-bottom: 50px;
+    }
+    @include desktop {
+        margin-bottom: 70px;
+    }
+    &__bg {
+        position: relative;
+    }
+    &__absolute {
+
+        @include tablet {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    &__image {
+        display: flex;
+        justify-content: end;
+        img {
+            @include tablet {
+                max-width: 50vw;
+            }
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        @include tablet {
+            width: fit-content;
+        }
+
+        button {
+            display: block;
+            margin-top: 12px;
+            text-align: center;
+            padding: 14px 0;
+            width: 100%;
+            @include tablet {
+                width: fit-content;
+                padding: 18px 69px;
+            }
+        }
+    }
+}
+
+.promo {
+    margin-bottom: 90px;
+    @include tablet {
+        margin-bottom: 80px;
+    }
+    @include desktop {
+        margin-bottom: 112px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+    }
+    &__image {
+
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h4 {
+            font-size: 20px;
+            font-weight: 800;
+            line-height: 25px;
+        }
+    }
+
+    .splide__pagination {
+        bottom: -1rem;
+        gap: 6px;
+
+        &__page {
+            flex-shrink: 0;
+            height: 12px;
+            width: 12px;
+            opacity: 100;
+
+            &.is-active {
+                transform: none;
+                background: $color-main;
+            }
+        }
+    }
+}
+
+.products {
+    margin-bottom: 60px;
+    @include tablet {
+        margin-bottom: 80px;
+    }
+    @include desktop {
+        margin-bottom: 100px;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        @include desktop {
+            margin-bottom: 55px;
+        }
+    }
+}
+
+.delivery {
+    margin-bottom: 20px;
+    @include tablet {
+        margin-bottom: 80px;
+    }
+    @include desktop {
+        margin-bottom: 95px;
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    &__bg {
+        background-color: #F8F6F3;
+        padding: 24px 0 40px 0;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        @include tablet {
+            gap: 32px;
+            flex-direction: row;
+        }
+    }
+    &__item {
+        display: flex;
+        gap: 14px;
+        box-shadow: 0px 2px 5px 0px #C7C1A84D;
+        border-radius: 6px;
+        background-color: white;
+        padding: 14px;
+        @include tablet {
+            padding: 25px 20px 40px 20px;
+            flex-direction: column;
+        }
+        @include desktop {
+            padding: 32px 24px;
+            flex-direction: row;
+            gap: 24px;
+        }
+    }
+    &__image {
+        flex-shrink: 0;
+        width: 48px;
+        height: 48px;
+        @include tablet {
+            width: 56px;
+            height: 56px;
+        }
+        @include desktop {
+            width: 80px;
+            height: 80px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+}
+
+.about {
+    margin-bottom: 60px;
+    @include tablet {
+        margin-bottom: 80px;
+    }
+    @include desktop {
+        margin-bottom: 100px;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include desktop {
+            max-width: 875px;
+            margin: 0 auto;
+        }
+    }
+    &__item {
+        display: flex;
+        gap: 16px;
+        @include tablet {
+            gap: 32px;
+            align-items: center;
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    &__image {
+        flex-shrink: 0;
+        width: 80px;
+        height: 80px;
+        @include tablet {
+            width: 251px;
+            height: 251px;
+        }
+        @include desktop {
+            width: 314px;
+            height: 314px;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        @include tablet {
+            max-width: 370px;
+            gap: 12px;
+        }
+        @include desktop {
+            max-width: 416px;
+        }
+    }
+}
+
+.instagram {
+    &__title {
+        text-align: center;
+        margin-bottom: 4px;
+    }
+    &__link {
+        font-family: 'Alegreya';
+        text-align: center;
+        font-size: 16px;
+        font-weight: 900;
+        line-height: 24px;
+        margin-bottom: 20px;
+        color: $color-gray-text;
+
+        @include tablet {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            display: none;
+            &:nth-child(-n+4) {
+                display: block;
+            }
+            @include tablet {
+                &:nth-child(-n+6) {
+                    display: block;
+                }
+            }
+            @include desktop {
+                display: block;
+            }
+        }
+
+        @include tablet{
+            grid-template-columns: repeat(3, 1fr);
+            :nth-child(-n+4) {
+                display: none;
+            }
+        }
+        @include desktop{
+            grid-template-columns: repeat(5, 1fr);
+        }
+    }
+}

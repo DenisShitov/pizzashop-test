@@ -1,0 +1,1 @@
+export {default as SectionInstagram} from './SectionInstagram.vue'

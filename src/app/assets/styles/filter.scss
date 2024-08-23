@@ -1,0 +1,62 @@
+.filter-products {
+
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        margin-bottom: 20px;
+        @include tablet {
+            margin-bottom: 40px;
+            gap: 40px;
+        }
+    }
+
+    &__item {
+        cursor: pointer;
+        p {
+            display: none;
+            font-family: Alegreya;
+            font-size: 16px;
+            font-weight: 900;
+            line-height: 21.78px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            @include tablet {
+                display: block;
+            }
+            @include desktop {
+                font-size: 18px;
+                line-height: 24.5px;
+            }
+        }
+
+        &.active {
+            p {
+                color: $color-main;
+            }
+            svg {
+                path {
+                    fill: $color-main;
+                }
+            }
+        }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        align-items: center;
+        svg {
+            path {
+                fill: $color-gray;
+            }
+        }
+        @include tablet {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export {default as SectionPromo} from './SectionPromo.vue'

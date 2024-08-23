@@ -1,0 +1,56 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 25px;
+    padding: 24px 0;
+    @include tablet {
+        flex-direction: row;
+    }
+    @include desktop {
+        padding: 32px 0;
+        flex-direction: row;
+    }
+    a {
+        color: white;
+        text-decoration: none;
+    }
+}
+.footer__logo {
+    @include tablet {
+        margin-right: 80px;
+    }
+    @include desktop {
+        margin-right: 100px;
+    }
+    svg {
+        width: 80px;
+        @include tablet {
+            width: 90px;
+        }
+        @include desktop {
+            width: 112px;
+        }
+        path {
+            fill: white;
+        }
+    }
+}
+.footer__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 10px;
+    text-align: center;
+    @include tablet {
+        flex-direction: row;
+        text-align: start;
+    }
+    @include desktop {
+        flex-direction: row;
+        text-align: start;
+    }
+}

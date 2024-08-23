@@ -1,0 +1,1 @@
+export { default as ItemsListGrid } from './List.vue'

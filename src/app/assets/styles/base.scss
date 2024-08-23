@@ -1,0 +1,177 @@
+@use 'scss-reset/reset';
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+$color-main: #E52D2D;
+$color-main-hovered: #FF3C3C;
+$color-main-pressed: #BF221E;
+$color-main: #E52D2D;
+$color-main: #E52D2D;
+$color-gray-text: #848A9A;
+$color-gray: #C5CBD1;
+$color-gray-bg: #EFF0F1;
+$color-gray-bg-disabled: #EEF0F3;
+$color-error: #FB7A7A;
+$color-focused: #3F8FE5;
+$color-focused-outline: #8FC9FF;
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+@mixin tablet {
+    @media (min-width: #{$tablet-width}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: #{$desktop-width}) {
+        @content;
+    }
+}
+
+h1 {
+    font-family: 'Alegreya';
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    @include tablet {
+        font-size: 52px;
+        line-height: 65px;
+    }
+    @include desktop {
+        font-size: 72px;
+        line-height: 90px;
+    }
+}
+h2 {
+    font-family: 'Alegreya';
+    font-size: 28px;
+    line-height: 35px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    @include tablet {
+        font-size: 40px;
+        line-height: 60px;
+    }
+    @include desktop {
+        font-size: 52px;
+        line-height: 65px;
+    }
+}
+
+h3 {
+    font-family: 'Alegreya';
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    @include tablet {
+        font-size: 24px;
+        line-height: 30px;
+    }
+    @include desktop {
+        font-size: 32px;
+        line-height: 40px;
+    }
+}
+
+h4 {
+    font-family: 'Alegreya';
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+    @include tablet {
+        font-size: 20px;
+        line-height: 27px;
+    }
+    @include desktop {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}
+
+p {
+    font-family: 'Roboto';
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    @include tablet {
+        font-size: 18px;
+    }
+    @include desktop {
+        font-size: 20px;
+    }
+    &.accent {
+        font-size: 16px;
+        line-height: 24px;
+        @include tablet {
+            font-size: 18px;
+            line-height: 27px;
+        }
+        @include desktop {
+            font-size: 24px;
+            line-height: 36px;
+        }
+    }
+    &.description {
+        font-size: 11px;
+        line-height: 17px;
+        @include tablet {
+            font-size: 12px;
+            line-height: 18px;
+        }
+        @include desktop {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+
+}
+
+button {
+    font-family: 'Alegreya';
+    color: white;
+
+    font-weight: 900;
+    border-radius: 5px;
+    padding: 0 14px;
+    background-color: $color-main;
+    display: flex;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include tablet {
+        font-size: 16px;
+        line-height: 21px;
+    }
+    @include desktop {
+        font-size: 18px;
+        line-height: 24.5px;
+    }
+    &:hover {
+        background-color: $color-main-hovered;
+    }
+    &:focus {
+        outline: 3px solid $color-focused-outline;
+    }
+    &:active {
+        background-color: $color-main-pressed;
+    }
+    &:disabled {
+        background-color: $color-gray-bg-disabled;
+        color: #939393;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    background-color: black;
+    color: white;
+}
+
+
